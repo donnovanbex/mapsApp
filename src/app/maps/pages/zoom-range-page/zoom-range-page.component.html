@@ -6,13 +6,17 @@
      class="form-range"
       min="-2" max="18"
       [value]="zoom"
+      #zoomInput
+      (input)="zoomChange(zoomInput.value)"
       >
     <button class="btn btn-primary" (click)="zoomIn()">+</button>
   </div>
+
   <span>
     zoom: {{zoom}}
     <br>
-    lng.lat {{''}}
+    lng.lat {{curretlnglat}}
+
   </span>
 
 </div>
